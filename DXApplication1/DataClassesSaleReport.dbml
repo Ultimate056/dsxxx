@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TEST" Class="DataClassesSaleReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DBSRV\DBSRV;Initial Catalog=TEST;Integrated Security=True" SettingsObjectName="DXApplication1.Properties.Settings" SettingsPropertyName="TESTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tempdata_for_salereport" Member="tempdata_for_salereport">
+    <Type Name="tempdata_for_salereport">
+      <Column Name="sumSale" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="kolSale" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nTerritoryShort" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Profit" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Profittrunsport" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MonthSale" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearSale" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nTypeTov" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="NameGroup" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="nAgent" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nPodgroup" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nKontr" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tm_name" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="Oblast" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="Segment" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="TovLine" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="TOV_NAME" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="in_tax" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="forder" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="nCategory" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="n_tov" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_tov_oem" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="id_tov" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="company_name" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="litrage_sumval" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="clustername" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="inn" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
