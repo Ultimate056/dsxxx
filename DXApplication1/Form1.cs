@@ -195,6 +195,11 @@ namespace DXApplication1
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if(deStart.EditValue == null || deEnd.EditValue == null)
+            {
+                MessageBox.Show("Введите даты начала и конца срока продаж", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             UseThreadForReport();
 
             #region Закомментировано,пока не удалять !!!
