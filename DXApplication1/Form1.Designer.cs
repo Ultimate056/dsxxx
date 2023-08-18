@@ -66,6 +66,8 @@
             DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding35 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
             DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding36 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.deEnd = new DevExpress.XtraEditors.DateEdit();
             this.deStart = new DevExpress.XtraEditors.DateEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -86,7 +88,6 @@
             this.fieldintax = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldinn = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
-            this.linqServerModeSource2 = new DevExpress.Data.Linq.LinqServerModeSource();
             this.fieldsumSale = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldkolSale = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldnTerritoryShort = new DevExpress.XtraPivotGrid.PivotGridField();
@@ -115,8 +116,7 @@
             this.fieldclustername1 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldinn1 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldcountXC = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.linqServerModeSource2 = new DevExpress.Data.Linq.LinqServerModeSource();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deEnd.Properties.CalendarTimeProperties)).BeginInit();
@@ -143,9 +143,29 @@
             this.panelControl1.Size = new System.Drawing.Size(1242, 33);
             this.panelControl1.TabIndex = 0;
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(232, 11);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(14, 16);
+            this.labelControl2.TabIndex = 3;
+            this.labelControl2.Text = "по";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(29, 9);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(43, 16);
+            this.labelControl1.TabIndex = 2;
+            this.labelControl1.Text = "Дата с ";
+            // 
             // deEnd
             // 
-            this.deEnd.EditValue = null;
+            this.deEnd.EditValue = new System.DateTime(2023, 8, 17, 17, 0, 20, 0);
             this.deEnd.Location = new System.Drawing.Point(252, 6);
             this.deEnd.Name = "deEnd";
             this.deEnd.Properties.Appearance.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -159,7 +179,7 @@
             // 
             // deStart
             // 
-            this.deStart.EditValue = null;
+            this.deStart.EditValue = new System.DateTime(2023, 8, 1, 0, 0, 0, 0);
             this.deStart.Location = new System.Drawing.Point(78, 6);
             this.deStart.Name = "deStart";
             this.deStart.Properties.Appearance.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -236,6 +256,10 @@
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "*.xls|XLS|*.xlsx|XLSX";
             // 
             // fieldclustername
             // 
@@ -347,15 +371,10 @@
             this.pivotGridControl1.Size = new System.Drawing.Size(1242, 838);
             this.pivotGridControl1.TabIndex = 2;
             // 
-            // linqServerModeSource2
-            // 
-            this.linqServerModeSource2.DefaultSorting = "tm_name ASC";
-            this.linqServerModeSource2.ElementType = typeof(DXApplication1.tempdata_for_salereport);
-            this.linqServerModeSource2.KeyExpression = "tm_name";
-            // 
             // fieldsumSale
             // 
-            this.fieldsumSale.AreaIndex = 14;
+            this.fieldsumSale.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldsumSale.AreaIndex = 0;
             this.fieldsumSale.Caption = "V продаж";
             dataSourceColumnBinding9.ColumnName = "sumSale";
             this.fieldsumSale.DataBinding = dataSourceColumnBinding9;
@@ -363,7 +382,8 @@
             // 
             // fieldkolSale
             // 
-            this.fieldkolSale.AreaIndex = 13;
+            this.fieldkolSale.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldkolSale.AreaIndex = 1;
             this.fieldkolSale.Caption = "Кол-во продаж";
             dataSourceColumnBinding10.ColumnName = "kolSale";
             this.fieldkolSale.DataBinding = dataSourceColumnBinding10;
@@ -379,7 +399,8 @@
             // 
             // fieldProfit
             // 
-            this.fieldProfit.AreaIndex = 1;
+            this.fieldProfit.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldProfit.AreaIndex = 2;
             this.fieldProfit.Caption = "ВМД";
             dataSourceColumnBinding12.ColumnName = "Profit";
             this.fieldProfit.DataBinding = dataSourceColumnBinding12;
@@ -387,7 +408,7 @@
             // 
             // fieldProfittrunsport
             // 
-            this.fieldProfittrunsport.AreaIndex = 2;
+            this.fieldProfittrunsport.AreaIndex = 1;
             this.fieldProfittrunsport.Caption = "Чистая наценка";
             dataSourceColumnBinding13.ColumnName = "Profittrunsport";
             this.fieldProfittrunsport.DataBinding = dataSourceColumnBinding13;
@@ -413,7 +434,7 @@
             // 
             // fieldnTypeTov
             // 
-            this.fieldnTypeTov.AreaIndex = 3;
+            this.fieldnTypeTov.AreaIndex = 2;
             this.fieldnTypeTov.Caption = "Вид товара";
             dataSourceColumnBinding16.ColumnName = "nTypeTov";
             this.fieldnTypeTov.DataBinding = dataSourceColumnBinding16;
@@ -421,7 +442,7 @@
             // 
             // fieldNameGroup
             // 
-            this.fieldNameGroup.AreaIndex = 4;
+            this.fieldNameGroup.AreaIndex = 3;
             this.fieldNameGroup.Caption = "Группа товара";
             dataSourceColumnBinding17.ColumnName = "NameGroup";
             this.fieldNameGroup.DataBinding = dataSourceColumnBinding17;
@@ -429,7 +450,7 @@
             // 
             // fieldnAgent
             // 
-            this.fieldnAgent.AreaIndex = 5;
+            this.fieldnAgent.AreaIndex = 4;
             this.fieldnAgent.Caption = "Торг.представитель";
             dataSourceColumnBinding18.ColumnName = "nAgent";
             this.fieldnAgent.DataBinding = dataSourceColumnBinding18;
@@ -437,7 +458,7 @@
             // 
             // fieldnPodgroup
             // 
-            this.fieldnPodgroup.AreaIndex = 6;
+            this.fieldnPodgroup.AreaIndex = 5;
             this.fieldnPodgroup.Caption = "Подгруппа тов";
             dataSourceColumnBinding19.ColumnName = "nPodgroup";
             this.fieldnPodgroup.DataBinding = dataSourceColumnBinding19;
@@ -445,8 +466,7 @@
             // 
             // fieldnKontr
             // 
-            this.fieldnKontr.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldnKontr.AreaIndex = 1;
+            this.fieldnKontr.AreaIndex = 20;
             this.fieldnKontr.Caption = "ХС";
             dataSourceColumnBinding20.ColumnName = "nKontr";
             this.fieldnKontr.DataBinding = dataSourceColumnBinding20;
@@ -463,7 +483,7 @@
             // 
             // fieldOblast
             // 
-            this.fieldOblast.AreaIndex = 7;
+            this.fieldOblast.AreaIndex = 6;
             this.fieldOblast.Caption = "Область";
             dataSourceColumnBinding22.ColumnName = "Oblast";
             this.fieldOblast.DataBinding = dataSourceColumnBinding22;
@@ -471,7 +491,7 @@
             // 
             // fieldSegment
             // 
-            this.fieldSegment.AreaIndex = 8;
+            this.fieldSegment.AreaIndex = 7;
             this.fieldSegment.Caption = "Канал сбыта";
             dataSourceColumnBinding23.ColumnName = "Segment";
             this.fieldSegment.DataBinding = dataSourceColumnBinding23;
@@ -479,7 +499,7 @@
             // 
             // fieldTovLine
             // 
-            this.fieldTovLine.AreaIndex = 9;
+            this.fieldTovLine.AreaIndex = 8;
             this.fieldTovLine.Caption = "Товарная линия";
             dataSourceColumnBinding24.ColumnName = "TovLine";
             this.fieldTovLine.DataBinding = dataSourceColumnBinding24;
@@ -487,7 +507,7 @@
             // 
             // fieldTOVNAME
             // 
-            this.fieldTOVNAME.AreaIndex = 10;
+            this.fieldTOVNAME.AreaIndex = 9;
             this.fieldTOVNAME.Caption = "Товарная группа";
             dataSourceColumnBinding25.ColumnName = "TOV_NAME";
             this.fieldTOVNAME.DataBinding = dataSourceColumnBinding25;
@@ -495,7 +515,7 @@
             // 
             // fieldintax1
             // 
-            this.fieldintax1.AreaIndex = 11;
+            this.fieldintax1.AreaIndex = 10;
             this.fieldintax1.Caption = "In Tax";
             dataSourceColumnBinding26.ColumnName = "in_tax";
             this.fieldintax1.DataBinding = dataSourceColumnBinding26;
@@ -503,7 +523,7 @@
             // 
             // fieldforder1
             // 
-            this.fieldforder1.AreaIndex = 12;
+            this.fieldforder1.AreaIndex = 11;
             this.fieldforder1.Caption = "Наличие";
             dataSourceColumnBinding27.ColumnName = "forder";
             this.fieldforder1.DataBinding = dataSourceColumnBinding27;
@@ -511,7 +531,7 @@
             // 
             // fieldnCategory
             // 
-            this.fieldnCategory.AreaIndex = 15;
+            this.fieldnCategory.AreaIndex = 12;
             this.fieldnCategory.Caption = "Ценовая категория";
             dataSourceColumnBinding28.ColumnName = "nCategory";
             this.fieldnCategory.DataBinding = dataSourceColumnBinding28;
@@ -519,7 +539,7 @@
             // 
             // fieldntov
             // 
-            this.fieldntov.AreaIndex = 16;
+            this.fieldntov.AreaIndex = 13;
             this.fieldntov.Caption = "Наименование товара";
             dataSourceColumnBinding29.ColumnName = "n_tov";
             this.fieldntov.DataBinding = dataSourceColumnBinding29;
@@ -527,7 +547,7 @@
             // 
             // fieldidtovoem1
             // 
-            this.fieldidtovoem1.AreaIndex = 17;
+            this.fieldidtovoem1.AreaIndex = 14;
             this.fieldidtovoem1.Caption = "Артикул";
             dataSourceColumnBinding30.ColumnName = "id_tov_oem";
             this.fieldidtovoem1.DataBinding = dataSourceColumnBinding30;
@@ -535,7 +555,7 @@
             // 
             // fieldidtov1
             // 
-            this.fieldidtov1.AreaIndex = 18;
+            this.fieldidtov1.AreaIndex = 15;
             this.fieldidtov1.Caption = "Код товара";
             dataSourceColumnBinding31.ColumnName = "id_tov";
             this.fieldidtov1.DataBinding = dataSourceColumnBinding31;
@@ -543,7 +563,7 @@
             // 
             // fieldcompanyname1
             // 
-            this.fieldcompanyname1.AreaIndex = 19;
+            this.fieldcompanyname1.AreaIndex = 16;
             this.fieldcompanyname1.Caption = "Компания";
             dataSourceColumnBinding32.ColumnName = "company_name";
             this.fieldcompanyname1.DataBinding = dataSourceColumnBinding32;
@@ -551,7 +571,7 @@
             // 
             // fieldlitragesumval
             // 
-            this.fieldlitragesumval.AreaIndex = 20;
+            this.fieldlitragesumval.AreaIndex = 17;
             this.fieldlitragesumval.Caption = "Литры";
             dataSourceColumnBinding33.ColumnName = "litrage_sumval";
             this.fieldlitragesumval.DataBinding = dataSourceColumnBinding33;
@@ -559,7 +579,7 @@
             // 
             // fieldclustername1
             // 
-            this.fieldclustername1.AreaIndex = 21;
+            this.fieldclustername1.AreaIndex = 18;
             this.fieldclustername1.Caption = "Кластер";
             dataSourceColumnBinding34.ColumnName = "clustername";
             this.fieldclustername1.DataBinding = dataSourceColumnBinding34;
@@ -567,7 +587,7 @@
             // 
             // fieldinn1
             // 
-            this.fieldinn1.AreaIndex = 22;
+            this.fieldinn1.AreaIndex = 19;
             this.fieldinn1.Caption = "Inn";
             dataSourceColumnBinding35.ColumnName = "inn";
             this.fieldinn1.DataBinding = dataSourceColumnBinding35;
@@ -576,32 +596,18 @@
             // fieldcountXC
             // 
             this.fieldcountXC.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.fieldcountXC.AreaIndex = 0;
+            this.fieldcountXC.AreaIndex = 3;
             this.fieldcountXC.Caption = "Кол-во ХС";
             dataSourceColumnBinding36.ColumnName = "nKontr";
             this.fieldcountXC.DataBinding = dataSourceColumnBinding36;
             this.fieldcountXC.Name = "fieldcountXC";
             this.fieldcountXC.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.CountDistinct;
             // 
-            // labelControl1
+            // linqServerModeSource2
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(29, 9);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(43, 16);
-            this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "Дата с ";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(232, 11);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(14, 16);
-            this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "по";
+            this.linqServerModeSource2.DefaultSorting = "tm_name ASC";
+            this.linqServerModeSource2.ElementType = typeof(DXApplication1.tempdata_for_salereport);
+            this.linqServerModeSource2.KeyExpression = "tm_name";
             // 
             // Form1
             // 
@@ -615,6 +621,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();

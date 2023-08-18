@@ -307,6 +307,12 @@ namespace DXApplication1
             //set.ShowDialog();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            deStart.EditValue = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            deEnd.EditValue = DateTime.Now.Date;
+        }
+
         //private void button1_Click(object sender, EventArgs e)
         //{
         //    var tbl = DataSale.getSalePeriod(deStart.DateTime, deEnd.DateTime);
